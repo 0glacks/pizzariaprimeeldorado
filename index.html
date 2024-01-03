@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background-image: url('images/Cardápio - Pizzaria Prime - em andamento_page-0007.jpg'); 
+            background-image: url('images/Cardápio\ -\ Pizzaria\ Prime\ -\ em\ andamento_page-0007.jpg'); /* Caminho para a imagem de fundo */
             background-repeat: repeat;
             background-size: cover;
             color: white;
@@ -17,23 +17,44 @@
 
         .container {
             width: 95%;
-            max-width: 900px; 
+            max-width: 800px;
             margin: auto;
             text-align: center;
-            position: relative; 
+        }
+
+        .first-image-container {
+            position: relative;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .first-image-container img,
+        .image img {
+            width: 100%;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 14%; 
+            right: 12%;
+            width: 20%;
+            height: 15%;
+            background-image: url('images/qrcode.png');
+            background-size: cover;
+            border-radius: 0%;
         }
 
         .image {
-            max-width: 100%;
             margin: 5px 0;
-            background-color: rgba(255,255,255,0.5);
         }
+
 
         .social-btn {
             padding: 10px;
             margin: 5px;
-            background-color: white;
-            color: purple;
+            background-color: dodgerblue;
+            color: white;
             border: none;
             cursor: pointer;
         }
@@ -49,12 +70,28 @@
 <body>
 
     <div class="container">
-        <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0001.jpg" alt="Image 1" class="image">
-        <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0002.jpg" alt="Image 2" class="image">
-        <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0003.jpg" alt="Image 3" class="image">
-        <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0004.jpg" alt="Image 4" class="image">
-        <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0005.jpg" alt="Image 5" class="image">
-        <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0006.jpg" alt="Image 6" class="image">
+        <!-- Primeira imagem com a sobreposição -->
+        <div class="first-image-container">
+            <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0001.jpg" alt="Primeira Imagem">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- Restante das imagens -->
+        <div class="image">
+            <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0002.jpg" alt="Imagem 2">
+        </div>
+        <div class="image">
+            <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0003.jpg" alt="Imagem 3">
+        </div>
+        <div class="image">
+            <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0004.jpg" alt="Imagem 4">
+        </div>
+        <div class="image">
+            <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0005.jpg" alt="Imagem 5">
+        </div>
+        <div class="image">
+            <img src="images/Cardápio - Pizzaria Prime - em andamento_page-0006.jpg" alt="Imagem 6">
+        </div>
     </div>
 
 </body>
